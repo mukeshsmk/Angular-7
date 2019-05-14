@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
             <div>
-            <H1>It Works</H1>
+            <h1>Test Works</h1>
+           
             </div>`,
   styles: [`div{
     color:red;

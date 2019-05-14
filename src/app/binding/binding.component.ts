@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-binding',
   template: `
+  <h1>Binding Works</h1>
   <h2>Welcome {{name}}</h2>
   <h2>{{2+2}}</h2>
   <h2>{{getUser()}}</h2>

@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
+import { TestComponent } from '../app/test/test.component';
+import { ClassBindingComponent } from '../app/class-binding/class-binding.component';
+import { BindingComponent } from '../app/binding/binding.component';
+import { HeaderComponent } from '../app/header/header.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'test', component: TestComponent },
+  { path: 'classbinding', component: ClassBindingComponent },
+  { path: 'binding', component: BindingComponent },
+  
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

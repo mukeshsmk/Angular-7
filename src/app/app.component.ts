@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ExampleServices } from '../app/services/example.services';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Hello World';
+ 
+  title:string;
+  
+  constructor( private _exampleservices:ExampleServices){
+
+  }
+  ngOnInit() {
+   this.title = this._exampleservices.someMethod();
+  }
+
 }

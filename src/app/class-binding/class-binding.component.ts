@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-class-binding',
   template: `
+  <h1>Class-Binding Works</h1>
   <h1>Welcome {{ title }}</h1>
   <h2 class="text-success">Welcome Angular 7 basics</h2>
   <h2 class="text-danger">Welcome Angular 7 basics</h2>
@@ -11,6 +12,8 @@ import { Component, OnInit } from '@angular/core';
   <h2 [class]="successClass">Welcome Angular 7 basics</h2>
   <h2 [class.text-danger]="hasError">Welcome Angular 7 basics</h2>
   <h2 [ngClass]="msgClasses">Welcome Angular 7 basics</h2>
+  <br>
+  <p [ngClass]="getError()">{{title}} </p>
   `,
   styles: [`
   .text-success{
@@ -28,7 +31,7 @@ export class ClassBindingComponent implements OnInit {
   public title = "Class Binding";
   public successClass = "text-success"
   public hasError = false;
-  public isSpecial = true;
+  public isSpecial = false;
   public msgClasses = {
     "text-success" : !this.hasError,
     "text-danger" : this.hasError,
@@ -40,4 +43,12 @@ export class ClassBindingComponent implements OnInit {
   ngOnInit() {
   }
 
+  getError(){
+    let errorClass = {
+      "text-success" : !this.hasError,
+      "text-danger" : this.hasError,
+      "text-special": this.isSpecial,
+    }
+    return errorClass;
+  }
 }
