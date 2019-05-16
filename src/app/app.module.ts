@@ -9,6 +9,9 @@ import { TestComponent } from './test/test.component';
 import { BindingComponent } from './binding/binding.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { HeaderComponent } from './header/header.component';
+import { SignupComponent } from './signup/signup.component';
+
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,13 @@ import { HeaderComponent } from './header/header.component';
     TestComponent,
     BindingComponent,
     ClassBindingComponent,
-    HeaderComponent
+    HeaderComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ExampleServices],
   bootstrap: [AppComponent]
